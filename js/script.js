@@ -14,6 +14,12 @@ $(document).ready(function(){
 			case "info": 
 				getDados('pages/info.html');
 				break;
+			case "dc":
+				getDados('pages/dc.html');
+				break;
+			case "interesse":
+				getDados('pages/interesse.html');
+				break;
 		}
 	
 	});
@@ -29,7 +35,7 @@ $(document).scroll(function(){
 
 function getDados(link){
 	var pedido = $.get(link, function(data){
-		if(link == 'index.html') $('.conteudo').html($('.conteudo p', data));
+		if(link == 'index.html') $('.conteudo').html($('.conteudo div', data));
 		else $('.conteudo').html(data);
 	});
 	pedido.error(function(){
