@@ -9,16 +9,16 @@ $(document).ready(function(){
 				getDados('index.html');
 				break;
 			case "trabalhos": 
-				getDados('pages/trabalhos.html');
+				getDados('pages/trabalhos.phtml');
 				break;
 			case "info": 
-				getDados('pages/info.html');
+				getDados('pages/info.phtml');
 				break;
 			case "dc":
-				getDados('pages/dc.html');
+				getDados('pages/dc.phtml');
 				break;
 			case "interesse":
-				getDados('pages/interesse.html');
+				getDados('pages/interesse.phtml');
 				break;
 		}
 	
@@ -26,12 +26,10 @@ $(document).ready(function(){
 	
 });
 
-/*
 $(document).scroll(function(){
-	if($(document).scrollTop() < 80) $('.home').css({'position': 'absolute', 'margin-top': 0});
-	else $('.home').css({'position': 'fixed', 'margin-top': -81});
+	if($(document).scrollTop() < 135) $('.home_menu').css({'position': 'absolute', 'margin-top': 105, 'background-color': 'transparent'});
+	else $('.home_menu').css({'position': 'fixed', 'margin-top': -25, 'background-color': '#999', 'border-radius': '5px'});
 });
-*/
 
 function getDados(link){
 	var pedido = $.get(link, function(data){
@@ -41,4 +39,5 @@ function getDados(link){
 	pedido.error(function(){
 		setTimeout(getDados, 1000); 
 	});
+	
 };

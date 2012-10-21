@@ -35,7 +35,7 @@ body{
 	float: left;
 }
 
-.home div:HOVER, .selecionado{
+.home_menu div:HOVER, .selecionado{
 	background-color: #F5F5F5 !important;
 	color: #111 !important;
 }
